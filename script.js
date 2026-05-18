@@ -9186,7 +9186,7 @@ const reports = [
     // CONSTRUCTION REPORTS 👆
    // ADVANCED REPORTS 👇
     {
-  id: 2001,
+  id: 1027,
   name: "ADVANCED DASHBOARD REPORT",
   icon: "📊",
   category: "Advanced",
@@ -10334,742 +10334,358 @@ const reports = [
   ]
 },
     // SOCIAL MEDIA REPORTS 👆
-  // Transport REPORT👇
-{
-  id: 22,
-  name: "TRANSPORT REPORT",
-  icon: "🚌",
-  category: "Transport",
-  color: "#ff6f00",
-  colorRgb: "rgba(255,111,0,0.25)",
-  use: "School transport students और bus fee records manage करने के लिए",
-  tags: ["COUNTIF","SUM","TRANSPORT","BUS","FEE"],
-  formulas: [
-    {
-      label: "Transport Students",
-      code: '=COUNTIF(B2:B100,"YES")',
-      desc: "Transport students count करने के लिए"
-    },
-    {
-      label: "Bus Fee Collection",
-      code: '=SUM(C2:C100)',
-      desc: "Bus fee collection calculate करने के लिए"
-    },
-    {
-      label: "Pending Bus Fee",
-      code: '=COUNTIF(D2:D100,"PENDING")',
-      desc: "Pending transport fee देखने के लिए"
-    }
-  ]
-},
-{
-  id: 23,
-  name: "BUS ROUTE REPORT",
-  icon: "🚍",
-  category: "Transport",
-  color: "#2196f3",
-  colorRgb: "rgba(33,150,243,0.25)",
-  use: "Bus routes और route wise students track करने के लिए",
-  tags: ["COUNTIF","ROUTE","BUS","STUDENT","TRACK"],
-  formulas: [
-    {
-      label: "Route 1 Students",
-      code: '=COUNTIF(B2:B100,"Route 1")',
-      desc: "Route 1 students count करने के लिए"
-    },
-    {
-      label: "Route 2 Students",
-      code: '=COUNTIF(B2:B100,"Route 2")',
-      desc: "Route 2 students count करने के लिए"
-    },
-    {
-      label: "Total Routes",
-      code: '=COUNTA(UNIQUE(B2:B100))',
-      desc: "Total unique routes count करने के लिए"
-    }
-  ]
-},
-// Transport REPORT 👆
-
- // Office REPORT 👇
-{
-  id: 29,
-  name: "EMPLOYEE ATTENDANCE REPORT",
-  icon: "🧑‍💼",
-  category: "Office",
-  color: "#00b894",
-  colorRgb: "rgba(0,184,148,0.25)",
-  use: "Employees की attendance और working days track करने के लिए",
-  tags: ["COUNTIF","ATTENDANCE","EMPLOYEE","OFFICE","PRESENT"],
-  formulas: [
-    {
-      label: "Present Employees",
-      code: '=COUNTIF(C2:C100,"PRESENT")',
-      desc: "Present employees count करने के लिए"
-    },
-    {
-      label: "Absent Employees",
-      code: '=COUNTIF(C2:C100,"ABSENT")',
-      desc: "Absent employees count करने के लिए"
-    },
-    {
-      label: "Attendance Percentage",
-      code: '=COUNTIF(C2:C100,"PRESENT")/COUNTA(C2:C100)*100',
-      desc: "Attendance percentage निकालने के लिए"
-    }
-  ]
-},
-{
-  id: 31,
-  name: "LEAVE REPORT",
-  icon: "🏖️",
-  category: "Office",
-  color: "#fdcb6e",
-  colorRgb: "rgba(253,203,110,0.25)",
-  use: "Employee leave records और leave balance track करने के लिए",
-  tags: ["COUNTIF","LEAVE","OFFICE","HOLIDAY","BALANCE"],
-  formulas: [
-    {
-      label: "Approved Leaves",
-      code: '=COUNTIF(C2:C100,"APPROVED")',
-      desc: "Approved leaves count करने के लिए"
-    },
-    {
-      label: "Pending Leaves",
-      code: '=COUNTIF(C2:C100,"PENDING")',
-      desc: "Pending leave requests count करने के लिए"
-    },
-    {
-      label: "Rejected Leaves",
-      code: '=COUNTIF(C2:C100,"REJECTED")',
-      desc: "Rejected leaves count करने के लिए"
-    }
-  ]
-},
-{
-  id: 32,
-  name: "DEPARTMENT REPORT",
-  icon: "🏢",
-  category: "Office",
-  color: "#6c5ce7",
-  colorRgb: "rgba(108,92,231,0.25)",
-  use: "Office departments और department wise employees manage करने के लिए",
-  tags: ["COUNTIF","DEPARTMENT","EMPLOYEE","TEAM","OFFICE"],
-  formulas: [
-    {
-      label: "HR Employees",
-      code: '=COUNTIF(B2:B100,"HR")',
-      desc: "HR employees count करने के लिए"
-    },
-    {
-      label: "IT Employees",
-      code: '=COUNTIF(B2:B100,"IT")',
-      desc: "IT employees count करने के लिए"
-    },
-    {
-      label: "Sales Employees",
-      code: '=COUNTIF(B2:B100,"SALES")',
-      desc: "Sales employees count करने के लिए"
-    }
-  ]
-},
-{
-  id: 33,
-  name: "PERFORMANCE REPORT",
-  icon: "📈",
-  category: "Office",
-  color: "#0984e3",
-  colorRgb: "rgba(9,132,227,0.25)",
-  use: "Employee performance score और ratings analyze करने के लिए",
-  tags: ["AVERAGE","MAX","MIN","PERFORMANCE","RATING"],
-  formulas: [
-    {
-      label: "Average Rating",
-      code: '=AVERAGE(C2:C100)',
-      desc: "Average performance rating निकालने के लिए"
-    },
-    {
-      label: "Highest Rating",
-      code: '=MAX(C2:C100)',
-      desc: "Highest performance rating देखने के लिए"
-    },
-    {
-      label: "Lowest Rating",
-      code: '=MIN(C2:C100)',
-      desc: "Lowest performance rating देखने के लिए"
-    }
-  ]
-},
-{
-  id: 34,
-  name: "DAILY WORK REPORT",
-  icon: "📋",
-  category: "Office",
-  color: "#e17055",
-  colorRgb: "rgba(225,112,85,0.25)",
-  use: "Daily tasks और completed work records manage करने के लिए",
-  tags: ["COUNTIF","TASK","WORK","DAILY","STATUS"],
-  formulas: [
-    {
-      label: "Completed Tasks",
-      code: '=COUNTIF(C2:C100,"DONE")',
-      desc: "Completed tasks count करने के लिए"
-    },
-    {
-      label: "Pending Tasks",
-      code: '=COUNTIF(C2:C100,"PENDING")',
-      desc: "Pending tasks count करने के लिए"
-    },
-    {
-      label: "Work Completion %",
-      code: '=COUNTIF(C2:C100,"DONE")/COUNTA(C2:C100)*100',
-      desc: "Work completion percentage निकालने के लिए"
-    }
-  ]
-},
-{
-  id: 35,
-  name: "MEETING REPORT",
-  icon: "🤝",
-  category: "Office",
-  color: "#00cec9",
-  colorRgb: "rgba(0,206,201,0.25)",
-  use: "Office meetings और attendance records manage करने के लिए",
-  tags: ["COUNTIF","MEETING","ATTENDANCE","OFFICE","TEAM"],
-  formulas: [
-    {
-      label: "Meeting Present",
-      code: '=COUNTIF(C2:C100,"PRESENT")',
-      desc: "Meeting उपस्थित employees count करने के लिए"
-    },
-    {
-      label: "Meeting Absent",
-      code: '=COUNTIF(C2:C100,"ABSENT")',
-      desc: "Meeting absent employees count करने के लिए"
-    },
-    {
-      label: "Total Meetings",
-      code: '=COUNTA(A2:A100)',
-      desc: "Total meetings count करने के लिए"
-    }
-  ]
-},
-{
-  id: 36,
-  name: "PROJECT REPORT",
-  icon: "🚀",
-  category: "Office",
-  color: "#d63031",
-  colorRgb: "rgba(214,48,49,0.25)",
-  use: "Projects की progress और completion status track करने के लिए",
-  tags: ["COUNTIF","PROJECT","STATUS","WORK","TEAM"],
-  formulas: [
-    {
-      label: "Completed Projects",
-      code: '=COUNTIF(C2:C100,"COMPLETED")',
-      desc: "Completed projects count करने के लिए"
-    },
-    {
-      label: "Pending Projects",
-      code: '=COUNTIF(C2:C100,"PENDING")',
-      desc: "Pending projects count करने के लिए"
-    },
-    {
-      label: "Project Completion %",
-      code: '=COUNTIF(C2:C100,"COMPLETED")/COUNTA(C2:C100)*100',
-      desc: "Project completion percentage निकालने के लिए"
-    }
-  ]
-},
- // Office REPORT 👆
-
- // Business REPORT 👇
-{
-    id: 9,
-    name: "SALES REPORT",
-    icon: "🧾",
-    category: "Business",
-    color: "#ff6b35",
-    colorRgb: "rgba(255,107,53,0.3)",
-    use: "Company की total sales, profit, loss और monthly revenue calculate करने के लिए",
-    tags: ["SUM","SUMIF","VLOOKUP","IF"],
-    formulas: [
-      { label: "Total Sales", code: "=SUM(B2:B50)", desc: "सभी sales का total" },
-      { label: "Profit / Loss", code: "=C2-B2", desc: "Profit या loss calculate करना" },
-      { label: "Profit %", code: "=(C2-B2)/B2*100", desc: "Profit percentage निकालने के लिए" },
-      { label: "Sales by Region", code: '=SUMIF(A2:A50,"North",B2:B50)', desc: "किसी specific region की sales" },
-      { label: "Tax Amount", code: "=B2*18%", desc: "18% GST calculate करने के लिए" },
-      { label: "Net Amount", code: "=B2+B2*18%", desc: "Tax के साथ total amount" },
-    ]
-  },
- {
-  id: 37,
-  name: "CLIENT REPORT",
-  icon: "👥",
-  category: "Business",
-  color: "#8e44ad",
-  colorRgb: "rgba(142,68,173,0.25)",
-  use: "Clients की details और active clients track करने के लिए",
-  tags: ["COUNTIF","CLIENT","BUSINESS","ACTIVE","RECORD"],
-  formulas: [
-    {
-      label: "Active Clients",
-      code: '=COUNTIF(C2:C100,"ACTIVE")',
-      desc: "Active clients count करने के लिए"
-    },
-    {
-      label: "Inactive Clients",
-      code: '=COUNTIF(C2:C100,"INACTIVE")',
-      desc: "Inactive clients count करने के लिए"
-    },
-    {
-      label: "Total Clients",
-      code: '=COUNTA(A2:A100)',
-      desc: "Total clients count करने के लिए"
-    }
-  ]
-},
-{
-  id: 47,
-  name: "CUSTOMER REPORT",
-  icon: "👥",
-  category: "Business",
-  color: "#6d4c41",
-  colorRgb: "rgba(109,76,65,0.25)",
-  use: "Customers की records और active customers manage करने के लिए",
-  tags: ["COUNTIF","CUSTOMER","ACTIVE","SHOP","CLIENT"],
-  formulas: [
-    {
-      label: "Total Customers",
-      code: '=COUNTA(A2:A100)',
-      desc: "Total customers count करने के लिए"
-    },
-    {
-      label: "Active Customers",
-      code: '=COUNTIF(C2:C100,"ACTIVE")',
-      desc: "Active customers count करने के लिए"
-    }
-  ]
-},
-{
-  id: 48,
-  name: "SUPPLIER REPORT",
-  icon: "🚚",
-  category: "Business",
-  color: "#5e35b1",
-  colorRgb: "rgba(94,53,177,0.25)",
-  use: "Suppliers और supply records track करने के लिए",
-  tags: ["COUNT","SUPPLIER","DELIVERY","PRODUCT","SHOP"],
-  formulas: [
-    {
-      label: "Total Suppliers",
-      code: '=COUNTA(A2:A100)',
-      desc: "Total suppliers count करने के लिए"
-    },
-    {
-      label: "Delivered Orders",
-      code: '=COUNTIF(C2:C100,"DELIVERED")',
-      desc: "Delivered supply orders count करने के लिए"
-    }
-  ]
-},
-// Business REPORT 👆
-
-// Shop REPORT 👇
-{
-  id: 40,
-  name: "SALES REPORT",
-  icon: "📈",
-  category: "Shop",
-  color: "#00c853",
-  colorRgb: "rgba(0,200,83,0.25)",
-  use: "Total sales और sold products track करने के लिए",
-  tags: ["SUM","SALES","PRODUCT","SHOP","TOTAL"],
-  formulas: [
-    {
-      label: "Total Sales",
-      code: '=SUM(C2:C100)',
-      desc: "Total sales amount calculate करने के लिए"
-    },
-    {
-      label: "Sold Products",
-      code: '=COUNT(A2:A100)',
-      desc: "Sold products count करने के लिए"
-    },
-    {
-      label: "Highest Sale",
-      code: '=MAX(C2:C100)',
-      desc: "Highest sale देखने के लिए"
-    }
-  ]
-},
-{
-  id: 41,
-  name: "DAILY SALES REPORT",
-  icon: "📅",
-  category: "Shop",
-  color: "#1e88e5",
-  colorRgb: "rgba(30,136,229,0.25)",
-  use: "Daily sales income और daily orders track करने के लिए",
-  tags: ["SUMIF","DATE","DAILY","SALES","ORDER"],
-  formulas: [
-    {
-      label: "Today's Sales",
-      code: '=SUMIF(A2:A100,TODAY(),C2:C100)',
-      desc: "आज की sales calculate करने के लिए"
-    },
-    {
-      label: "Today's Orders",
-      code: '=COUNTIF(A2:A100,TODAY())',
-      desc: "आज के orders count करने के लिए"
-    }
-  ]
-},
-{
-  id: 42,
-  name: "MONTHLY SALES REPORT",
-  icon: "🗓️",
-  category: "Shop",
-  color: "#8e24aa",
-  colorRgb: "rgba(142,36,170,0.25)",
-  use: "Monthly sales income और growth analyze करने के लिए",
-  tags: ["SUMIF","MONTH","SALES","INCOME","SHOP"],
-  formulas: [
-    {
-      label: "January Sales",
-      code: '=SUMIF(B2:B100,"January",C2:C100)',
-      desc: "January month sales calculate करने के लिए"
-    },
-    {
-      label: "Yearly Sales",
-      code: '=SUM(C2:C100)',
-      desc: "पूरे साल की sales calculate करने के लिए"
-    }
-  ]
-},
-{
-  id: 43,
-  name: "PURCHASE REPORT",
-  icon: "🛍️",
-  category: "Shop",
-  color: "#fb8c00",
-  colorRgb: "rgba(251,140,0,0.25)",
-  use: "Purchased products और purchase cost track करने के लिए",
-  tags: ["SUM","PURCHASE","PRODUCT","COST","SHOP"],
-  formulas: [
-    {
-      label: "Total Purchase",
-      code: '=SUM(C2:C100)',
-      desc: "Total purchase amount calculate करने के लिए"
-    },
-    {
-      label: "Purchased Products",
-      code: '=COUNT(A2:A100)',
-      desc: "Purchased products count करने के लिए"
-    }
-  ]
-},
-{
-  id: 46,
-  name: "PRODUCT REPORT",
-  icon: "🧴",
-  category: "Shop",
-  color: "#00897b",
-  colorRgb: "rgba(0,137,123,0.25)",
-  use: "Products की details और pricing records manage करने के लिए",
-  tags: ["COUNT","PRODUCT","PRICE","SHOP","ITEM"],
-  formulas: [
-    {
-      label: "Total Products",
-      code: '=COUNTA(A2:A100)',
-      desc: "Total products count करने के लिए"
-    },
-    {
-      label: "Highest Price",
-      code: '=MAX(C2:C100)',
-      desc: "Highest product price देखने के लिए"
-    }
-  ]
-},
-// Shop REPORT 👆
-
-// Hostel REPORT 👇
-{
-  id: 24,
-  name: "HOSTEL REPORT",
-  icon: "🏠",
-  category: "Hostel",
-  color: "#4db6ac",
-  colorRgb: "rgba(77,182,172,0.25)",
-  use: "Hostel students और room allocation records manage करने के लिए",
-  tags: ["COUNTIF","IF","HOSTEL","ROOM","STUDENT"],
-  formulas: [
-    {
-      label: "Hostel Students",
-      code: '=COUNTIF(B2:B100,"HOSTEL")',
-      desc: "Hostel students count करने के लिए"
-    },
-    {
-      label: "Available Rooms",
-      code: '=COUNTIF(C2:C100,"AVAILABLE")',
-      desc: "Available hostel rooms count करने के लिए"
-    },
-    {
-      label: "Occupied Rooms",
-      code: '=COUNTIF(C2:C100,"OCCUPIED")',
-      desc: "Occupied rooms count करने के लिए"
-    }
-  ]
-},
- // Hostel REPORT 👆
-
- // Inventory REPORT  👇
-{
-  id: 44,
-  name: "STOCK REPORT",
-  icon: "📦",
-  category: "Inventory",
-  color: "#3949ab",
-  colorRgb: "rgba(57,73,171,0.25)",
-  use: "Available stock quantity और inventory manage करने के लिए",
-  tags: ["SUM","STOCK","PRODUCT","INVENTORY","COUNT"],
-  formulas: [
-    {
-      label: "Total Stock",
-      code: '=SUM(C2:C100)',
-      desc: "Total stock quantity calculate करने के लिए"
-    },
-    {
-      label: "Available Products",
-      code: '=COUNTIF(C2:C100,">0")',
-      desc: "Available products count करने के लिए"
-    }
-  ]
-},
-{
-  id: 45,
-  name: "LOW STOCK REPORT",
-  icon: "⚠️",
-  category: "Inventory",
-  color: "#e53935",
-  colorRgb: "rgba(229,57,53,0.25)",
-  use: "Low stock products और refill alerts देखने के लिए",
-  tags: ["COUNTIF","LOW","STOCK","ALERT","PRODUCT"],
-  formulas: [
-    {
-      label: "Low Stock Products",
-      code: '=COUNTIF(C2:C100,"<10")',
-      desc: "10 से कम stock वाले products count करने के लिए"
-    },
-    {
-      label: "Stock Alert",
-      code: '=IF(C2<10,"LOW STOCK","OK")',
-      desc: "Low stock alert दिखाने के लिए"
-    }
-  ]
-},
-// Inventory REPORT  👆
-
-// HR REPORT 👇
-{
-    id: 10,
-    name: "EMPLOYEE REPORT",
-    icon: "👨‍💼",
-    category: "HR",
-    color: "#bf5fff",
-    colorRgb: "rgba(191,95,255,0.3)",
-    use: "Employee की salary, bonus, overtime और deductions calculate करने के लिए",
-    tags: ["SUM","IF","VLOOKUP","ROUND"],
-    formulas: [
-      { label: "Basic Salary", code: "=D2*E2", desc: "Daily rate × Working days" },
-      { label: "HRA (40%)", code: "=D2*40%", desc: "House Rent Allowance calculate करना" },
-      { label: "Overtime Pay", code: "=F2*G2*1.5", desc: "Overtime hours × rate × 1.5" },
-      { label: "PF Deduction (12%)", code: "=D2*12%", desc: "Provident Fund deduction" },
-      { label: "Net Salary", code: "=D2+E2+F2-G2-H2", desc: "Total salary - सभी deductions" },
-      { label: "Bonus", code: '=IF(J2>90,D2*20%,IF(J2>75,D2*10%,0))', desc: "Performance के basis पर bonus" },
-    ]
-  },
-{
-    id: 12,
-    name: "ATTENDANCE REPORT",
-    icon: "📅",
-    category: "Education / HR",
-    color: "#00e5ff",
-    colorRgb: "rgba(0,229,255,0.3)",
-    use: "Employee या student की attendance percentage और absent days calculate करने के लिए",
-    tags: ["COUNTIF","NETWORKDAYS","IF"],
-    formulas: [
-      { label: "Present Days", code: '=COUNTIF(B2:AF2,"P")', desc: "महीने में कितने दिन Present है" },
-      { label: "Absent Days", code: '=COUNTIF(B2:AF2,"A")', desc: "महीने में कितने दिन Absent है" },
-      { label: "Attendance %", code: '=COUNTIF(B2:AF2,"P")/26*100', desc: "26 working days में से attendance %" },
-      { label: "Working Days", code: "=NETWORKDAYS(A1,A2)", desc: "दो dates के बीच working days" },
-      { label: "Shortage", code: '=IF(AH2<75,"SHORT","OK")', desc: "75% से कम हो तो shortage alert" },
-    ]
-  },
-// HR REPORT 👆
-
-//Stock REPORT 👇
-  {
-    id: 11,
-    name: "INVENTORY REPORT",
-    icon: "📦",
-    category: "Stock",
-    color: "#ffd700",
-    colorRgb: "rgba(255,215,0,0.3)",
-    use: "Product stock, reorder level और inventory value calculate करने के लिए",
-    tags: ["SUMIF","VLOOKUP","IF","COUNTIF"],
-    formulas: [
-      { label: "Stock Value", code: "=B2*C2", desc: "Quantity × Price = Total value" },
-      { label: "Low Stock Alert", code: '=IF(B2<D2,"REORDER","OK")', desc: "Stock कम हो तो REORDER दिखाए" },
-      { label: "Total Inventory Value", code: "=SUMPRODUCT(B2:B100,C2:C100)", desc: "पूरी inventory की total value" },
-      { label: "Stock Count", code: "=COUNTIF(E2:E100,\"REORDER\")", desc: "कितने items को reorder करना है" },
-      { label: "Category Total", code: '=SUMIF(A2:A100,"Electronics",B2:B100)', desc: "Category के basis पर stock total" },
-    ]
-  },
-  //Stock REPORT 👆
-
-  // Government REPORT 👇
-{
-    id: 14,
-    name: "TAX REPORT",
-    icon: "🧮",
-    category: "Finance / Government",
-    color: "#a8ff3e",
-    colorRgb: "rgba(168,255,62,0.3)",
-    use: "Income tax, GST, TDS और net taxable income calculate करने के लिए",
-    tags: ["IF","ROUND","SUM","VLOOKUP"],
-    formulas: [
-      { label: "Taxable Income", code: "=B1-B2-B3", desc: "Gross income - deductions" },
-      { label: "Income Tax (30%)", code: '=IF(B4>10,00000,B4*30%,IF(B4>5,00000,B4*20%,0))', desc: "Slab के basis पर income tax" },
-      { label: "GST Amount", code: "=B2*18%", desc: "18% GST calculate करना" },
-      { label: "CGST + SGST", code: "=B2*9%", desc: "9% CGST और 9% SGST अलग-अलग" },
-      { label: "TDS Deduction (10%)", code: "=B1*10%", desc: "10% TDS deduction" },
-      { label: "Net Take Home", code: "=B1-C1-D1", desc: "सभी taxes के बाद net income" },
-    ]
-  },
-  // Government REPORT 👆
 ];
 
 // RENDER CARDS
 function renderCards(data) {
+
   const grid = document.getElementById('reportGrid');
   const noRes = document.getElementById('noResults');
+
   grid.innerHTML = '';
 
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     noRes.classList.add('visible');
     return;
   }
+
   noRes.classList.remove('visible');
 
   data.forEach((r, i) => {
+
     const card = document.createElement('div');
+
     card.className = 'card';
-    card.style.cssText = `--accent: ${r.color}; --accent-color: ${r.color}; --accent-rgb: ${r.colorRgb}; animation-delay: ${i * 0.08}s;`;
+
+    card.style.cssText = `
+      --accent: ${r.color || '#00c8ff'};
+      --accent-color: ${r.color || '#00c8ff'};
+      --accent-rgb: ${r.colorRgb || 'rgba(0,200,255,0.25)'};
+      animation-delay: ${i * 0.08}s;
+    `;
+
     card.innerHTML = `
-      <div class="card-icon" style="border-color:${r.color}; box-shadow: 0 0 20px ${r.colorRgb};">${r.icon}</div>
-      <div class="card-name">${r.name}</div>
-      <div class="card-category" style="color:${r.color}">${r.category}</div>
-      <div class="card-desc">${r.use.slice(0,80)}...</div>
-      <div class="formula-pills">${r.tags.map(t => `<span class="formula-pill">${t}</span>`).join('')}</div>
-      <button class="view-btn" style="border-color:${r.color}; color:${r.color};" onclick="openModal(${r.id})">
+
+      <div class="card-icon"
+      style="border-color:${r.color}; box-shadow:0 0 20px ${r.colorRgb};">
+        ${r.icon || '📊'}
+      </div>
+
+      <div class="card-name">
+        ${r.name || 'No Name'}
+      </div>
+
+      <div class="card-category"
+      style="color:${r.color}">
+        ${r.category || 'General'}
+      </div>
+
+      <div class="card-desc">
+        ${(r.use || '').slice(0,80)}...
+      </div>
+
+      <div class="formula-pills">
+
+        ${(r.tags || []).map(t => `
+          <span class="formula-pill">${t}</span>
+        `).join('')}
+
+      </div>
+
+      <button class="view-btn"
+      style="border-color:${r.color}; color:${r.color};"
+      onclick="openModal(${r.id})">
+
         🔘 View Formulas
+
       </button>
     `;
-    card.querySelector('.view-btn').addEventListener('click', function(e) {
+
+    // RIPPLE EFFECT
+    const btn = card.querySelector('.view-btn');
+
+    btn.addEventListener('click', function(e) {
+
       const rect = this.getBoundingClientRect();
+
       const ripple = document.createElement('span');
+
       ripple.className = 'ripple';
+
       const size = Math.max(rect.width, rect.height);
-      ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px;`;
+
+      ripple.style.cssText = `
+        width:${size}px;
+        height:${size}px;
+        left:${e.clientX - rect.left - size / 2}px;
+        top:${e.clientY - rect.top - size / 2}px;
+      `;
+
       this.appendChild(ripple);
+
       setTimeout(() => ripple.remove(), 600);
+
     });
+
     grid.appendChild(card);
+
   });
+
 }
+
+
 
 // OPEN MODAL
 function openModal(id) {
+
   const r = reports.find(x => x.id === id);
-  document.getElementById('modalIcon').textContent = r.icon;
-  document.getElementById('modalTitle').textContent = r.name;
-  document.getElementById('modalTitle').style.color = r.color;
-  document.getElementById('modalSubtitle').textContent = r.category;
-  document.getElementById('modalSubtitle').style.color = r.color;
-  document.getElementById('modalUse').innerHTML = `<span>📌 Use:</span> ${r.use}`;
+
+  console.log(r);
+
+  if (!r) {
+    alert("Report not found!");
+    return;
+  }
+
+  if (!r.formulas || !Array.isArray(r.formulas)) {
+    alert("Formulas not found!");
+    return;
+  }
+
+  document.getElementById('modalIcon').textContent = r.icon || '📊';
+
+  document.getElementById('modalTitle').textContent = r.name || 'No Name';
+
+  document.getElementById('modalTitle').style.color = r.color || '#00c8ff';
+
+  document.getElementById('modalSubtitle').textContent =
+    r.category || 'General';
+
+  document.getElementById('modalSubtitle').style.color =
+    r.color || '#00c8ff';
+
+  document.getElementById('modalUse').innerHTML =
+    `<span>📌 Use:</span> ${r.use || 'No description available'}`;
 
   const body = document.getElementById('modalBody');
+
   body.innerHTML = `
-    <div class="formula-section-title">📊 All Formulas</div>
-    ${r.formulas.map((f, i) => `
-      <div class="formula-item">
-        <div class="formula-label"><span class="arrow">➤</span> ${f.label} <small style="color:#555;font-weight:400;margin-left:auto;font-size:0.75rem">${f.desc}</small></div>
-        <div class="formula-code-row">
-          <div class="formula-code">${f.code}</div>
-          <button class="copy-btn" onclick="copyFormula(this, '${f.code.replace(/'/g,"&apos;")}')">📋 Copy</button>
-        </div>
-      </div>
-    `).join('')}
-    <div class="modal-tutorial">
-      <a class="tutorial-btn" href="https://www.youtube.com/results?search_query=${encodeURIComponent(r.name + ' excel formula tutorial')}" target="_blank">
-        ▶ Watch Tutorial on YouTube
-      </a>
+
+    <div class="formula-section-title">
+      📊 All Formulas
     </div>
+
+    ${(r.formulas || []).map((f) => `
+
+      <div class="formula-item">
+
+        <div class="formula-label">
+
+          <span class="arrow">➤</span>
+
+          ${f.label || 'No Label'}
+
+          <small
+          style="
+          color:#777;
+          font-weight:400;
+          margin-left:auto;
+          font-size:0.75rem;
+          ">
+            ${f.desc || ''}
+          </small>
+
+        </div>
+
+        <div class="formula-code-row">
+
+          <div class="formula-code">
+            ${f.code || ''}
+          </div>
+
+          <button
+          class="copy-btn"
+          onclick="copyFormula(this, \`${f.code || ''}\`)">
+
+            📋 Copy
+
+          </button>
+
+        </div>
+
+      </div>
+
+    `).join('')}
+
+    <div class="modal-tutorial">
+
+      <a
+      class="tutorial-btn"
+      href="https://www.youtube.com/results?search_query=${encodeURIComponent((r.name || '') + ' excel formula tutorial')}"
+      target="_blank">
+
+        ▶ Watch Tutorial on YouTube
+
+      </a>
+
+    </div>
+
   `;
 
-  document.getElementById('modalOverlay').classList.add('active');
+  document.getElementById('modalOverlay')
+    .classList.add('active');
+
   document.body.style.overflow = 'hidden';
+
 }
+
+
 
 // CLOSE MODAL
 document.getElementById('modalClose').onclick = closeModal;
+
 document.getElementById('modalOverlay').onclick = function(e) {
   if (e.target === this) closeModal();
 };
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-// COPY
-function copyFormula(btn, code) {
-  navigator.clipboard.writeText(code).then(() => {
-    btn.textContent = '✅ Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = '📋 Copy';
-      btn.classList.remove('copied');
-    }, 2000);
-  });
-}
-
-// SEARCH
-document.getElementById('searchInput').addEventListener('input', function() {
-  const q = this.value.toLowerCase().trim();
-  if (!q) { renderCards(reports); return; }
-  const filtered = reports.filter(r =>
-    r.name.toLowerCase().includes(q) ||
-    r.category.toLowerCase().includes(q) ||
-    r.use.toLowerCase().includes(q) ||
-    r.tags.some(t => t.toLowerCase().includes(q)) ||
-    r.formulas.some(f => f.code.toLowerCase().includes(q) || f.label.toLowerCase().includes(q))
-  );
-  renderCards(filtered);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
 });
 
-// COUNT
-document.getElementById('totalFormulas').textContent = reports.reduce((a, r) => a + r.formulas.length, 0);
-document.getElementById('totalReports').textContent = reports.length;
+function closeModal() {
 
-// SCROLL ANIMATION
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.style.opacity = '1';
+  document.getElementById('modalOverlay')
+    .classList.remove('active');
+
+  document.body.style.overflow = '';
+
+}
+
+
+
+// COPY FORMULA
+function copyFormula(btn, code) {
+
+  navigator.clipboard.writeText(code).then(() => {
+
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+
+    setTimeout(() => {
+
+      btn.textContent = '📋 Copy';
+      btn.classList.remove('copied');
+
+    }, 2000);
+
   });
-}, { threshold: 0.1 });
+
+}
+
+
+
+// SEARCH
+document.getElementById('searchInput')
+.addEventListener('input', function() {
+
+  const q = this.value.toLowerCase().trim();
+
+  if (!q) {
+    renderCards(reports);
+    return;
+  }
+
+  const filtered = reports.filter(r =>
+
+    (r.name || '').toLowerCase().includes(q) ||
+
+    (r.category || '').toLowerCase().includes(q) ||
+
+    (r.use || '').toLowerCase().includes(q) ||
+
+    (r.tags || []).some(t =>
+      t.toLowerCase().includes(q)
+    ) ||
+
+    (r.formulas || []).some(f =>
+
+      (f.code || '').toLowerCase().includes(q) ||
+
+      (f.label || '').toLowerCase().includes(q)
+
+    )
+
+  );
+
+  renderCards(filtered);
+
+});
+
+
+
+// TOTAL COUNTS
+document.getElementById('totalReports').innerText =
+  reports.length;
+
+let totalFormulaCount = 0;
+
+reports.forEach(report => {
+
+  totalFormulaCount +=
+    (report.formulas || []).length;
+
+});
+
+document.getElementById('totalFormulas').innerText =
+  totalFormulaCount;
+
+
 
 // INIT
 renderCards(reports);
+
+//next code hai ma 👇✔️
+
+
+// DARK / LIGHT MODE
+
+const themeToggle =
+document.getElementById('themeToggle');
+
+
+// LOAD SAVED THEME
+
+if(localStorage.getItem('theme') === 'light'){
+
+  document.body.classList.add('light-mode');
+
+  themeToggle.innerHTML = '☀️ Light Mode';
+
+}
+
+
+// TOGGLE
+
+themeToggle.addEventListener('click', () => {
+
+  document.body.classList.toggle('light-mode');
+
+  // SAVE THEME
+
+  if(document.body.classList.contains('light-mode')){
+
+    localStorage.setItem('theme','light');
+
+    themeToggle.innerHTML = '☀️ Light Mode';
+
+  }
+
+  else{
+
+    localStorage.setItem('theme','dark');
+
+    themeToggle.innerHTML = '🌙 Dark Mode';
+
+  }
+
+});
